@@ -1,0 +1,19 @@
+Hi,
+I'm a front-end developer with 5+ years of professional working experience and more than 6+ years of web development experience. I am a B.Tech CSE graduate. Working at Trivago, based in Dusseldorf, Germany. Also working as a part-time reactJs and CSS consultant.
+
+I have great skill to convert designs into pixel perfect responsive web apps. Advanced level in es6, reactJs, and VueJs (Nuxt.js). Have experience in Highcharts and d3.js. Along with the client-side projects, I also contribute to some of the back-end projects in Javascript and Typescript for creating graphQl modules. I am used to agile project management and find it very comfortable working with Scrum. 
+Apart from developing the front end tasks, I also help the team in QA’ying the task and help in improving the test automation code for the front end projects using cypress.js
+I love hot loading and serve my files as chunks and prefer SASS or LESS over CSS. Good at HTML, CSS, Javascript (upto es9), and Decent knowledge of Webpack and Gulp. Skilled in developing Progressive Web Apps (PWA)
+
+Languages, libraries, and framework: VueJs, ReactJs, React-redux, HTML, CSS, Javascript, Typescript, Python(beginner), jQuery, Docker, AWS, Service worker, REST, GraphQl, Tailwind
+Version control tool: Git
+
+Publication: Image assisted data security using key encrypted file (IJERT)
+link: https://www.ijert.org/phocadownload/V4I5/IJERTV4IS050194.pdf
+
+Github: https://github.com/syam1123
+StackOverflow: https://stackoverflow.com/users/5542538/syam-pillai
+Website: https://syamsp.com
+
+Regards,
+Syam Sadasivan Pillai
