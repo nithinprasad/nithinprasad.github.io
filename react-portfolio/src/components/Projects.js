@@ -81,7 +81,7 @@ const Projects = () => {
             <div className="col-md-10 col-md-offset-1">
               <div className="fh5co-blog" style={{
                 padding: '0',
-                borderLeft: '3px solid #2c98f0',
+                borderLeft: '3px solid #FF9000',
                 backgroundColor: '#f8f8f8'
               }}>
                 <div className="blog-text" style={{padding: '30px'}}>
