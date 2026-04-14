@@ -15,7 +15,7 @@ const Projects = () => {
             <div className="fh5co-blog animate-box">
               <div className="blog-text">
                 <span className="posted_on">Technical Lead</span>
-                <h3><a href="#">Conversa (TCS Chatbot)</a></h3>
+                <h3><span style={{cursor: 'default'}}>Conversa (TCS Chatbot)</span></h3>
                 <p>Technology: Java 11, Rest, Jboss,MicroServices, Spring boot</p>
                 <p>Responsibilities:
                   <ul>
@@ -33,7 +33,7 @@ const Projects = () => {
             <div className="fh5co-blog animate-box">
               <div className="blog-text">
                 <span className="posted_on">Technical Lead</span>
-                <h3><a href="#">Luminor</a></h3>
+                <h3><span style={{cursor: 'default'}}>Luminor</span></h3>
                 <p>Technology: Java8, Openam, Rest, Jboss</p>
                 <p>Responsibilities:
                   <ul>
@@ -53,7 +53,7 @@ const Projects = () => {
             <div className="fh5co-blog animate-box">
               <div className="blog-text">
                 <span className="posted_on">Snr. Java Devloper</span>
-                <h3><a href="#">Bank South Pacific </a></h3>
+                <h3><span style={{cursor: 'default'}}>Bank South Pacific </span></h3>
                 <p>Technology: JDBC, Servlets, JSP, Java7, Soap, Oracle weblogic</p>
                 <p>Responsibilities:
                   <ul>
@@ -70,7 +70,7 @@ const Projects = () => {
             <div className="fh5co-blog animate-box">
               <div className="blog-text">
                 <span className="posted_on">Java Devloper</span>
-                <h3><a href="#">Mercantile Bank Limited </a></h3>
+                <h3><span style={{cursor: 'default'}}>Mercantile Bank Limited </span></h3>
                 <p>Technology & Environment: JDBC, Servlets, JSP, Java7, Soap, IBM WebSphere</p>
                 <p>Responsibilities:
                   <ul>
