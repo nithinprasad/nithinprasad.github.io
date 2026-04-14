@@ -23,7 +23,6 @@ const About = () => {
           <div className="col-md-4">
             <ul className="info">
               <li><span className="first-block">Full Name:</span><span className="second-block">Nithin Prasad</span></li>
-              <li><span className="first-block">Phone:</span><span className="second-block">+372 55591434</span></li>
               <li><span className="first-block">Phone:</span><span className="second-block">+91 9567320219</span></li>
               <li><span className="first-block">Email:</span><span className="second-block">nithinprasad549@yahoo.com</span></li>
               <li><span className="first-block">Website:</span><span className="second-block">thenithinprasad.com</span></li>

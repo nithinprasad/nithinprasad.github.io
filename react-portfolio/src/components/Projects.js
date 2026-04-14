@@ -6,14 +6,15 @@ const Projects = () => {
       role: 'Technical Lead',
       title: 'Expedia WLT (Worldwide Loyalty & Traveler)',
       company: 'IBS Software (Client: Expedia Group)',
-      technology: 'Java 8/11/17, Spring Boot, REST APIs, Microservices, OAuth2, Oracle, Docker, Kubernetes, CI/CD',
+      technology: 'Kotlin, GraphQL, Java, React, Spring Boot, Microservices, OAuth2, Oracle, Docker, Kubernetes, CI/CD',
       responsibilities: [
-        'Leading backend development for Expedia\'s Worldwide Loyalty and Traveler preferences platform',
-        'Designing and implementing scalable microservices architecture for high-traffic travel booking systems',
-        'Building RESTful APIs for loyalty tier mapping, traveler profile management, and preference tracking',
-        'Implementing OAuth2 authentication and authorization mechanisms across distributed services',
+        'Leading backend development using Kotlin and GraphQL for Expedia\'s Worldwide Loyalty and Traveler platform',
+        'Designing microservices architecture with Kotlin backend, React frontend, and shared library components',
+        'Building GraphQL APIs with schema review process for loyalty tier mapping and traveler profile management',
+        'Implementing type-safe communication between backend (Kotlin/GraphQL) and frontend (React) services',
+        'Establishing GraphQL schema governance and review workflows for API consistency',
         'Working on business logic for loyalty rewards calculation and tier upgrade rules',
-        'Collaborating with global product teams for requirement analysis and feature delivery'
+        'Implementing OAuth2 authentication and authorization across distributed services'
       ]
     },
     {
@@ -76,42 +77,44 @@ const Projects = () => {
             <p>Professional Experience Highlights</p>
           </div>
         </div>
-        {projects.map((project, index) => (
-          <div key={index} className="row animate-box" style={{marginBottom: '40px'}}>
-            <div className="col-md-10 col-md-offset-1">
+        <div className="row">
+          {projects.map((project, index) => (
+            <div key={index} className="col-md-6 animate-box" style={{marginBottom: '30px'}}>
               <div className="fh5co-blog" style={{
                 padding: '0',
                 borderLeft: '3px solid #FF9000',
-                backgroundColor: '#f8f8f8'
+                backgroundColor: '#f8f8f8',
+                height: '100%',
+                minHeight: '400px'
               }}>
-                <div className="blog-text" style={{padding: '30px'}}>
-                  <div style={{marginBottom: '20px'}}>
+                <div className="blog-text" style={{padding: '25px'}}>
+                  <div style={{marginBottom: '18px'}}>
                     <span className="posted_on">{project.role}</span>
-                    <h3 style={{marginTop: '10px', marginBottom: '8px'}}>
+                    <h3 style={{marginTop: '10px', marginBottom: '8px', fontSize: '20px'}}>
                       {project.title}
                     </h3>
-                    <p style={{marginBottom: '5px', fontSize: '14px', color: '#999'}}>
+                    <p style={{marginBottom: '5px', fontSize: '13px', color: '#999'}}>
                       <i className="icon-briefcase" style={{marginRight: '5px'}}></i>
                       {project.company}
                     </p>
-                    <p style={{marginBottom: '20px', fontSize: '14px', color: '#7f7f7f', lineHeight: '1.6'}}>
+                    <p style={{marginBottom: '18px', fontSize: '13px', color: '#7f7f7f', lineHeight: '1.5'}}>
                       <i className="icon-code" style={{marginRight: '5px'}}></i>
                       {project.technology}
                     </p>
                   </div>
                   <div>
-                    <h4 style={{marginBottom: '15px', color: '#333', fontSize: '16px'}}>Key Responsibilities:</h4>
-                    <ul style={{marginLeft: '0', paddingLeft: '20px', lineHeight: '1.9'}}>
+                    <h4 style={{marginBottom: '12px', color: '#333', fontSize: '15px'}}>Key Responsibilities:</h4>
+                    <ul style={{marginLeft: '0', paddingLeft: '20px', lineHeight: '1.7', fontSize: '14px'}}>
                       {project.responsibilities.map((resp, idx) => (
-                        <li key={idx} style={{marginBottom: '8px', color: '#666'}}>{resp}</li>
+                        <li key={idx} style={{marginBottom: '6px', color: '#666'}}>{resp}</li>
                       ))}
                     </ul>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
