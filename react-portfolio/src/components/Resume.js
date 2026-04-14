@@ -19,15 +19,34 @@ const Resume = () => {
                 <div className="timeline-badge"><i className="icon-suitcase"></i></div>
                 <div className="timeline-panel">
                   <div className="timeline-heading">
+                    <h3 className="timeline-title">Technical Lead</h3>
+                    <span className="company">IBS Software (Client: Expedia Group) - June 2023 - Present</span>
+                  </div>
+                  <div className="timeline-body">
+                    <p>Leading backend development for Expedia platform modules in a large-scale distributed system. Designing and developing scalable microservices using Java and Spring Boot.</p>
+                    <ul>
+                      <li>Building and maintaining RESTful APIs for high-traffic travel and booking systems</li>
+                      <li>Implementing authentication and authorization mechanisms across services</li>
+                      <li>Working on business logic implementation, including loyalty tier mapping and rule processing</li>
+                      <li>Driving architectural decisions to enhance scalability, maintainability, and performance</li>
+                      <li>Mentoring team members, conducting code reviews, and promoting best engineering practices</li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li className="timeline-inverted animate-box">
+                <div className="timeline-badge"><i className="icon-suitcase"></i></div>
+                <div className="timeline-panel">
+                  <div className="timeline-heading">
                     <h3 className="timeline-title">Onsite Technical Lead</h3>
-                    <span className="company">Luminor Bank Estonia - TCS Consultant - 2021 - Current</span>
+                    <span className="company">Luminor Bank Estonia - TCS Consultant - 2021 - 2023</span>
                   </div>
                   <div className="timeline-body">
                     <p>Worked as a consultant for Luminor Bank in Estonia </p>
                   </div>
                 </div>
               </li>
-              <li className="timeline-inverted animate-box">
+              <li className="animate-box timeline-unverted">
                 <div className="timeline-badge"><i className="icon-suitcase"></i></div>
                 <div className="timeline-panel">
                   <div className="timeline-heading">
@@ -39,7 +58,7 @@ const Resume = () => {
                   </div>
                 </div>
               </li>
-              <li className="animate-box timeline-unverted">
+              <li className="timeline-inverted animate-box">
                 <div className="timeline-badge"><i className="icon-suitcase"></i></div>
                 <div className="timeline-panel">
                   <div className="timeline-heading">

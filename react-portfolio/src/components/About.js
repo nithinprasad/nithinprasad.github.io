@@ -22,7 +22,7 @@ const About = () => {
           </div>
           <div className="col-md-8">
             <h2>Hello There!</h2>
-            <p>Enthusiastic and reliable Java Developer with a strong banking knowledge base. 6+ years of industry experience as part of a computer program development team. Served as a technical lead for 3+ years and have good onsite experience..</p>
+            <p>Enthusiastic and reliable Java Developer with expertise in building large-scale distributed systems. 9+ years of industry experience in banking, travel, and e-commerce domains. Currently leading backend development at Expedia Group, with strong background in microservices architecture, Spring Boot, and cloud technologies.</p>
             <p>
               <ul className="fh5co-social-icons">
                 <li><a href="https://twitter.com/NITHINPRASAD2"><i className="icon-twitter2"></i></a></li>
