@@ -1,0 +1,92 @@
+import React from 'react';
+
+const Projects = () => {
+  return (
+    <div id="fh5co-blog">
+      <div className="container">
+        <div className="row animate-box">
+          <div className="col-md-8 col-md-offset-2 text-center fh5co-heading">
+            <h2>Projects</h2>
+            <p>List of Projects Completed So Far</p>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-3">
+            <div className="fh5co-blog animate-box">
+              <div className="blog-text">
+                <span className="posted_on">Technical Lead</span>
+                <h3><span style={{cursor: 'default'}}>Conversa (TCS Chatbot)</span></h3>
+                <p>Technology: Java 11, Rest, Jboss,MicroServices, Spring boot</p>
+                <p>Responsibilities:
+                  <ul>
+                    <li>Migration of framework from Java8 to Java 11</li>
+                    <li>Designing and develop of plugin that can be used in chatbot</li>
+                    <li>Designing of security and authentication and authorization layer to expose service to third party</li>
+                    <li>Worked closed with business for requirement finalization</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-md-3">
+            <div className="fh5co-blog animate-box">
+              <div className="blog-text">
+                <span className="posted_on">Technical Lead</span>
+                <h3><span style={{cursor: 'default'}}>Luminor</span></h3>
+                <p>Technology: Java8, Openam, Rest, Jboss</p>
+                <p>Responsibilities:
+                  <ul>
+                    <li>Worked closely with the client for requirement finalization </li>
+                    <li>Worked closely with the L2 team for production support and analysis </li>
+                    <li>Worked closely with the performance team for application tuning  </li>
+                    <li>Designing and integrating application with oauth provider</li>
+                    <li>Involved in Analysis, Design, Coding</li>
+                    <li>Integration with third party providers for the Security integration using web services</li>
+                    <li>Worked closely with team for containerisation</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-3">
+            <div className="fh5co-blog animate-box">
+              <div className="blog-text">
+                <span className="posted_on">Snr. Java Devloper</span>
+                <h3><span style={{cursor: 'default'}}>Bank South Pacific </span></h3>
+                <p>Technology: JDBC, Servlets, JSP, Java7, Soap, Oracle weblogic</p>
+                <p>Responsibilities:
+                  <ul>
+                    <li>Involved in Analysis, Design, Coding, and Testing of Application</li>
+                    <li>Developed entire admin module, Developed the banking transactions</li>
+                    <li>Integration with third party providers for the Security integration using webservices</li>
+                    <li>Deploying and Managing application in the server</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-3">
+            <div className="fh5co-blog animate-box">
+              <div className="blog-text">
+                <span className="posted_on">Java Devloper</span>
+                <h3><span style={{cursor: 'default'}}>Mercantile Bank Limited </span></h3>
+                <p>Technology & Environment: JDBC, Servlets, JSP, Java7, Soap, IBM WebSphere</p>
+                <p>Responsibilities:
+                  <ul>
+                    <li>Involved in Analysis, Design, Coding, and Testing of Application</li>
+                    <li>Developed entire admin module, Developed the banking transactions</li>
+                    <li>Integration with third party providers for the Security integration using webservices</li>
+                    <li>Deploying and Managing application in the server</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Projects;
