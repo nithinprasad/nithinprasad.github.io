@@ -15,6 +15,30 @@ const Projects = () => {
             <div className="fh5co-blog animate-box">
               <div className="blog-text">
                 <span className="posted_on">Technical Lead</span>
+                <h3><span style={{cursor: 'default'}}>Expedia WLT (Worldwide Loyalty & Traveler)</span></h3>
+                <p>Company: IBS Software (Client: Expedia Group)</p>
+                <p>Technology: Java 8/11/17, Spring Boot, REST APIs, Microservices, OAuth2, Oracle, Docker, Kubernetes, CI/CD</p>
+                <p>Responsibilities:
+                  <ul>
+                    <li>Leading backend development for Expedia's Worldwide Loyalty and Traveler preferences platform</li>
+                    <li>Designing and implementing scalable microservices architecture for high-traffic travel booking systems</li>
+                    <li>Building RESTful APIs for loyalty tier mapping, traveler profile management, and preference tracking</li>
+                    <li>Implementing OAuth2 authentication and authorization mechanisms across distributed services</li>
+                    <li>Working on business logic for loyalty rewards calculation and tier upgrade rules</li>
+                    <li>Collaborating with global product teams for requirement analysis and feature delivery</li>
+                    <li>Driving architectural decisions to improve system scalability and performance</li>
+                    <li>Mentoring team members and conducting code reviews</li>
+                    <li>Contributing to CI/CD pipelines and deployment automation</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-md-3">
+            <div className="fh5co-blog animate-box">
+              <div className="blog-text">
+                <span className="posted_on">Technical Lead</span>
                 <h3><span style={{cursor: 'default'}}>Conversa (TCS Chatbot)</span></h3>
                 <p>Technology: Java 11, Rest, Jboss,MicroServices, Spring boot</p>
                 <p>Responsibilities:

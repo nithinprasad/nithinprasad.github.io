@@ -1,6 +1,29 @@
 import React from 'react';
 
 const Resume = () => {
+  // Calculate experience dynamically from June 2025
+  const calculateExperience = () => {
+    const startDate = new Date(2025, 5, 1); // June 2025 (month is 0-indexed)
+    const currentDate = new Date();
+
+    const yearsDiff = currentDate.getFullYear() - startDate.getFullYear();
+    const monthsDiff = currentDate.getMonth() - startDate.getMonth();
+
+    const totalMonths = (yearsDiff * 12) + monthsDiff;
+    const years = Math.floor(totalMonths / 12);
+    const months = totalMonths % 12;
+
+    if (years === 0 && months === 0) {
+      return 'June 2025 - Present';
+    } else if (years === 0) {
+      return `June 2025 - Present (${months} month${months > 1 ? 's' : ''})`;
+    } else if (months === 0) {
+      return `June 2025 - Present (${years} year${years > 1 ? 's' : ''})`;
+    } else {
+      return `June 2025 - Present (${years} year${years > 1 ? 's' : ''} ${months} month${months > 1 ? 's' : ''})`;
+    }
+  };
+
   return (
     <div id="fh5co-resume" className="fh5co-bg-color">
       <div className="container">
@@ -20,17 +43,7 @@ const Resume = () => {
                 <div className="timeline-panel">
                   <div className="timeline-heading">
                     <h3 className="timeline-title">Technical Lead</h3>
-                    <span className="company">IBS Software (Client: Expedia Group) - June 2023 - Present</span>
-                  </div>
-                  <div className="timeline-body">
-                    <p>Leading backend development for Expedia platform modules in a large-scale distributed system. Designing and developing scalable microservices using Java and Spring Boot.</p>
-                    <ul>
-                      <li>Building and maintaining RESTful APIs for high-traffic travel and booking systems</li>
-                      <li>Implementing authentication and authorization mechanisms across services</li>
-                      <li>Working on business logic implementation, including loyalty tier mapping and rule processing</li>
-                      <li>Driving architectural decisions to enhance scalability, maintainability, and performance</li>
-                      <li>Mentoring team members, conducting code reviews, and promoting best engineering practices</li>
-                    </ul>
+                    <span className="company">IBS Software (Client: Expedia Group) - {calculateExperience()}</span>
                   </div>
                 </div>
               </li>
@@ -39,10 +52,7 @@ const Resume = () => {
                 <div className="timeline-panel">
                   <div className="timeline-heading">
                     <h3 className="timeline-title">Onsite Technical Lead</h3>
-                    <span className="company">Luminor Bank Estonia - TCS Consultant - 2021 - 2023</span>
-                  </div>
-                  <div className="timeline-body">
-                    <p>Worked as a consultant for Luminor Bank in Estonia </p>
+                    <span className="company">Luminor Bank Estonia - TCS Consultant - 2021 - 2025</span>
                   </div>
                 </div>
               </li>
@@ -51,10 +61,7 @@ const Resume = () => {
                 <div className="timeline-panel">
                   <div className="timeline-heading">
                     <h3 className="timeline-title">Technical Lead</h3>
-                    <span className="company">TCS - 2018 - 2020</span>
-                  </div>
-                  <div className="timeline-body">
-                    <p>Have acted as Technical lead for BSP Implementation</p>
+                    <span className="company">TCS - 2018 - 2021</span>
                   </div>
                 </div>
               </li>
@@ -62,11 +69,8 @@ const Resume = () => {
                 <div className="timeline-badge"><i className="icon-suitcase"></i></div>
                 <div className="timeline-panel">
                   <div className="timeline-heading">
-                    <h3 className="timeline-title">Java Devloper</h3>
+                    <h3 className="timeline-title">Java Developer</h3>
                     <span className="company">TCS - 2015 - 2018</span>
-                  </div>
-                  <div className="timeline-body">
-                    <p>Have worked as a Java Devloper for Multiple Implementation</p>
                   </div>
                 </div>
               </li>
