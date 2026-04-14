@@ -77,41 +77,33 @@ const Projects = () => {
           </div>
         </div>
         {projects.map((project, index) => (
-          <div key={index} className="row animate-box" style={{marginBottom: '30px'}}>
+          <div key={index} className="row animate-box" style={{marginBottom: '40px'}}>
             <div className="col-md-10 col-md-offset-1">
               <div className="fh5co-blog" style={{
-                padding: '30px',
-                border: '1px solid #e6e6e6',
-                borderRadius: '5px',
-                backgroundColor: '#fff',
-                boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+                padding: '0',
+                borderLeft: '3px solid #2c98f0',
+                backgroundColor: '#f8f8f8'
               }}>
-                <div className="blog-text">
-                  <div style={{marginBottom: '15px'}}>
-                    <span className="posted_on" style={{
-                      display: 'inline-block',
-                      padding: '5px 15px',
-                      backgroundColor: '#2c98f0',
-                      color: '#fff',
-                      borderRadius: '3px',
-                      fontSize: '12px',
-                      marginBottom: '10px'
-                    }}>{project.role}</span>
-                    <h3 style={{marginTop: '10px', marginBottom: '5px', color: '#2c98f0'}}>
+                <div className="blog-text" style={{padding: '30px'}}>
+                  <div style={{marginBottom: '20px'}}>
+                    <span className="posted_on">{project.role}</span>
+                    <h3 style={{marginTop: '10px', marginBottom: '8px'}}>
                       {project.title}
                     </h3>
-                    <p style={{marginBottom: '5px', fontStyle: 'italic', color: '#666'}}>
-                      <strong>Company:</strong> {project.company}
+                    <p style={{marginBottom: '5px', fontSize: '14px', color: '#999'}}>
+                      <i className="icon-briefcase" style={{marginRight: '5px'}}></i>
+                      {project.company}
                     </p>
-                    <p style={{marginBottom: '15px', color: '#666'}}>
-                      <strong>Technology:</strong> {project.technology}
+                    <p style={{marginBottom: '20px', fontSize: '14px', color: '#7f7f7f', lineHeight: '1.6'}}>
+                      <i className="icon-code" style={{marginRight: '5px'}}></i>
+                      {project.technology}
                     </p>
                   </div>
                   <div>
-                    <strong style={{display: 'block', marginBottom: '10px', color: '#333'}}>Key Responsibilities:</strong>
-                    <ul style={{marginLeft: '20px', lineHeight: '1.8'}}>
+                    <h4 style={{marginBottom: '15px', color: '#333', fontSize: '16px'}}>Key Responsibilities:</h4>
+                    <ul style={{marginLeft: '0', paddingLeft: '20px', lineHeight: '1.9'}}>
                       {project.responsibilities.map((resp, idx) => (
-                        <li key={idx}>{resp}</li>
+                        <li key={idx} style={{marginBottom: '8px', color: '#666'}}>{resp}</li>
                       ))}
                     </ul>
                   </div>
