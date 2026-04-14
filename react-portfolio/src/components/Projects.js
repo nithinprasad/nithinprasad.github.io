@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Projects = () => {
-  const projects = [
+  const professionalProjects = [
     {
       role: 'Technical Lead',
       title: 'Expedia WLT (Worldwide Loyalty & Traveler)',
@@ -68,6 +68,45 @@ const Projects = () => {
     }
   ];
 
+  const sideProjects = [
+    {
+      title: 'Kombanz Wedding Planners',
+      url: 'https://kombanzweddingplanners.com/',
+      technology: 'React, Bootstrap, Responsive Design, Firebase Hosting',
+      description: 'Full-featured wedding planning website with modern UI/UX design. Built responsive web application for wedding planning services showcasing portfolio, services, and contact management.',
+      highlights: [
+        'Responsive single-page application with smooth scrolling',
+        'Modern UI with Bootstrap framework',
+        'Optimized for mobile and desktop viewing',
+        'Integrated contact forms and service showcase'
+      ]
+    },
+    {
+      title: 'PRR Trans Global',
+      url: 'https://www.prrtransglobal.com/',
+      technology: 'React, Bootstrap, Font Awesome, Responsive Design',
+      description: 'Corporate website for logistics and transportation company. Developed professional business website with service catalog, company information, and client communication features.',
+      highlights: [
+        'Professional corporate design and branding',
+        'Service catalog and company portfolio',
+        'SEO-optimized content structure',
+        'Responsive design for all devices'
+      ]
+    },
+    {
+      title: 'Football Heroes',
+      url: 'https://footballheroes.nithinprasad.com/',
+      technology: 'React, JavaScript, REST APIs, Responsive UI',
+      description: 'Interactive football-themed web application. Built engaging web application for football enthusiasts with dynamic content and interactive features.',
+      highlights: [
+        'Interactive user interface',
+        'Dynamic content rendering',
+        'Responsive design patterns',
+        'Hosted on custom subdomain'
+      ]
+    }
+  ];
+
   return (
     <div id="fh5co-blog">
       <div className="container">
@@ -78,7 +117,7 @@ const Projects = () => {
           </div>
         </div>
         <div className="row">
-          {projects.map((project, index) => (
+          {professionalProjects.map((project, index) => (
             <div key={index} className="col-md-6 animate-box" style={{marginBottom: '30px'}}>
               <div className="fh5co-blog" style={{
                 padding: '0',
@@ -107,6 +146,51 @@ const Projects = () => {
                     <ul style={{marginLeft: '0', paddingLeft: '20px', lineHeight: '1.7', fontSize: '14px'}}>
                       {project.responsibilities.map((resp, idx) => (
                         <li key={idx} style={{marginBottom: '6px', color: '#666'}}>{resp}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="row animate-box" style={{marginTop: '60px'}}>
+          <div className="col-md-8 col-md-offset-2 text-center fh5co-heading">
+            <h2>Side Projects</h2>
+            <p>Personal Development & Web Applications</p>
+          </div>
+        </div>
+        <div className="row">
+          {sideProjects.map((project, index) => (
+            <div key={index} className="col-md-4 animate-box" style={{marginBottom: '30px'}}>
+              <div className="fh5co-blog" style={{
+                padding: '0',
+                borderLeft: '3px solid #2C98F0',
+                backgroundColor: '#f8f8f8',
+                height: '100%',
+                minHeight: '350px'
+              }}>
+                <div className="blog-text" style={{padding: '25px'}}>
+                  <div style={{marginBottom: '18px'}}>
+                    <span className="posted_on" style={{backgroundColor: '#2C98F0'}}>Side Project</span>
+                    <h3 style={{marginTop: '10px', marginBottom: '8px', fontSize: '20px'}}>
+                      <a href={project.url} target="_blank" rel="noopener noreferrer" style={{color: '#333', textDecoration: 'none'}}>
+                        {project.title}
+                      </a>
+                    </h3>
+                    <p style={{marginBottom: '5px', fontSize: '13px', color: '#7f7f7f', lineHeight: '1.5'}}>
+                      <i className="icon-code" style={{marginRight: '5px'}}></i>
+                      {project.technology}
+                    </p>
+                  </div>
+                  <div>
+                    <p style={{marginBottom: '12px', fontSize: '14px', color: '#666', lineHeight: '1.6'}}>
+                      {project.description}
+                    </p>
+                    <ul style={{marginLeft: '0', paddingLeft: '20px', lineHeight: '1.7', fontSize: '13px'}}>
+                      {project.highlights.map((highlight, idx) => (
+                        <li key={idx} style={{marginBottom: '6px', color: '#666'}}>{highlight}</li>
                       ))}
                     </ul>
                   </div>
