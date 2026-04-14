@@ -1,113 +1,125 @@
 import React from 'react';
 
 const Projects = () => {
+  const projects = [
+    {
+      role: 'Technical Lead',
+      title: 'Expedia WLT (Worldwide Loyalty & Traveler)',
+      company: 'IBS Software (Client: Expedia Group)',
+      technology: 'Java 8/11/17, Spring Boot, REST APIs, Microservices, OAuth2, Oracle, Docker, Kubernetes, CI/CD',
+      responsibilities: [
+        'Leading backend development for Expedia\'s Worldwide Loyalty and Traveler preferences platform',
+        'Designing and implementing scalable microservices architecture for high-traffic travel booking systems',
+        'Building RESTful APIs for loyalty tier mapping, traveler profile management, and preference tracking',
+        'Implementing OAuth2 authentication and authorization mechanisms across distributed services',
+        'Working on business logic for loyalty rewards calculation and tier upgrade rules',
+        'Collaborating with global product teams for requirement analysis and feature delivery'
+      ]
+    },
+    {
+      role: 'Technical Lead',
+      title: 'Conversa (TCS Chatbot)',
+      company: 'Tata Consultancy Services',
+      technology: 'Java 11, REST, JBoss, MicroServices, Spring Boot',
+      responsibilities: [
+        'Migration of framework from Java 8 to Java 11',
+        'Designing and developing plugins for chatbot functionality',
+        'Designing security, authentication and authorization layer to expose services to third parties',
+        'Worked closely with business for requirement finalization'
+      ]
+    },
+    {
+      role: 'Technical Lead',
+      title: 'Luminor Bank',
+      company: 'Luminor Bank Estonia - TCS Consultant',
+      technology: 'Java 8, OpenAM, REST, JBoss',
+      responsibilities: [
+        'Worked closely with client for requirement finalization',
+        'Worked closely with L2 team for production support and analysis',
+        'Designing and integrating application with OAuth provider',
+        'Integration with third party providers for security using web services',
+        'Application containerization and performance tuning'
+      ]
+    },
+    {
+      role: 'Senior Java Developer',
+      title: 'Bank South Pacific',
+      company: 'Tata Consultancy Services',
+      technology: 'JDBC, Servlets, JSP, Java 7, SOAP, Oracle WebLogic',
+      responsibilities: [
+        'Analysis, Design, Coding, and Testing of Application',
+        'Developed entire admin module and banking transactions',
+        'Integration with third party providers for security',
+        'Deploying and managing application in server'
+      ]
+    },
+    {
+      role: 'Java Developer',
+      title: 'Mercantile Bank Limited',
+      company: 'Tata Consultancy Services',
+      technology: 'JDBC, Servlets, JSP, Java 7, SOAP, IBM WebSphere',
+      responsibilities: [
+        'Analysis, Design, Coding, and Testing of Application',
+        'Developed entire admin module and banking transactions',
+        'Integration with third party providers for security',
+        'Deploying and managing application in server'
+      ]
+    }
+  ];
+
   return (
     <div id="fh5co-blog">
       <div className="container">
         <div className="row animate-box">
           <div className="col-md-8 col-md-offset-2 text-center fh5co-heading">
             <h2>Projects</h2>
-            <p>List of Projects Completed So Far</p>
+            <p>Professional Experience Highlights</p>
           </div>
         </div>
-        <div className="row">
-          <div className="col-md-3">
-            <div className="fh5co-blog animate-box">
-              <div className="blog-text">
-                <span className="posted_on">Technical Lead</span>
-                <h3><span style={{cursor: 'default'}}>Expedia WLT (Worldwide Loyalty & Traveler)</span></h3>
-                <p>Company: IBS Software (Client: Expedia Group)</p>
-                <p>Technology: Java 8/11/17, Spring Boot, REST APIs, Microservices, OAuth2, Oracle, Docker, Kubernetes, CI/CD</p>
-                <p>Responsibilities:
-                  <ul>
-                    <li>Leading backend development for Expedia's Worldwide Loyalty and Traveler preferences platform</li>
-                    <li>Designing and implementing scalable microservices architecture for high-traffic travel booking systems</li>
-                    <li>Building RESTful APIs for loyalty tier mapping, traveler profile management, and preference tracking</li>
-                    <li>Implementing OAuth2 authentication and authorization mechanisms across distributed services</li>
-                    <li>Working on business logic for loyalty rewards calculation and tier upgrade rules</li>
-                    <li>Collaborating with global product teams for requirement analysis and feature delivery</li>
-                    <li>Driving architectural decisions to improve system scalability and performance</li>
-                    <li>Mentoring team members and conducting code reviews</li>
-                    <li>Contributing to CI/CD pipelines and deployment automation</li>
-                  </ul>
-                </p>
+        {projects.map((project, index) => (
+          <div key={index} className="row animate-box" style={{marginBottom: '30px'}}>
+            <div className="col-md-10 col-md-offset-1">
+              <div className="fh5co-blog" style={{
+                padding: '30px',
+                border: '1px solid #e6e6e6',
+                borderRadius: '5px',
+                backgroundColor: '#fff',
+                boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+              }}>
+                <div className="blog-text">
+                  <div style={{marginBottom: '15px'}}>
+                    <span className="posted_on" style={{
+                      display: 'inline-block',
+                      padding: '5px 15px',
+                      backgroundColor: '#2c98f0',
+                      color: '#fff',
+                      borderRadius: '3px',
+                      fontSize: '12px',
+                      marginBottom: '10px'
+                    }}>{project.role}</span>
+                    <h3 style={{marginTop: '10px', marginBottom: '5px', color: '#2c98f0'}}>
+                      {project.title}
+                    </h3>
+                    <p style={{marginBottom: '5px', fontStyle: 'italic', color: '#666'}}>
+                      <strong>Company:</strong> {project.company}
+                    </p>
+                    <p style={{marginBottom: '15px', color: '#666'}}>
+                      <strong>Technology:</strong> {project.technology}
+                    </p>
+                  </div>
+                  <div>
+                    <strong style={{display: 'block', marginBottom: '10px', color: '#333'}}>Key Responsibilities:</strong>
+                    <ul style={{marginLeft: '20px', lineHeight: '1.8'}}>
+                      {project.responsibilities.map((resp, idx) => (
+                        <li key={idx}>{resp}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-
-          <div className="col-md-3">
-            <div className="fh5co-blog animate-box">
-              <div className="blog-text">
-                <span className="posted_on">Technical Lead</span>
-                <h3><span style={{cursor: 'default'}}>Conversa (TCS Chatbot)</span></h3>
-                <p>Technology: Java 11, Rest, Jboss,MicroServices, Spring boot</p>
-                <p>Responsibilities:
-                  <ul>
-                    <li>Migration of framework from Java8 to Java 11</li>
-                    <li>Designing and develop of plugin that can be used in chatbot</li>
-                    <li>Designing of security and authentication and authorization layer to expose service to third party</li>
-                    <li>Worked closed with business for requirement finalization</li>
-                  </ul>
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-md-3">
-            <div className="fh5co-blog animate-box">
-              <div className="blog-text">
-                <span className="posted_on">Technical Lead</span>
-                <h3><span style={{cursor: 'default'}}>Luminor</span></h3>
-                <p>Technology: Java8, Openam, Rest, Jboss</p>
-                <p>Responsibilities:
-                  <ul>
-                    <li>Worked closely with the client for requirement finalization </li>
-                    <li>Worked closely with the L2 team for production support and analysis </li>
-                    <li>Worked closely with the performance team for application tuning  </li>
-                    <li>Designing and integrating application with oauth provider</li>
-                    <li>Involved in Analysis, Design, Coding</li>
-                    <li>Integration with third party providers for the Security integration using web services</li>
-                    <li>Worked closely with team for containerisation</li>
-                  </ul>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-3">
-            <div className="fh5co-blog animate-box">
-              <div className="blog-text">
-                <span className="posted_on">Snr. Java Devloper</span>
-                <h3><span style={{cursor: 'default'}}>Bank South Pacific </span></h3>
-                <p>Technology: JDBC, Servlets, JSP, Java7, Soap, Oracle weblogic</p>
-                <p>Responsibilities:
-                  <ul>
-                    <li>Involved in Analysis, Design, Coding, and Testing of Application</li>
-                    <li>Developed entire admin module, Developed the banking transactions</li>
-                    <li>Integration with third party providers for the Security integration using webservices</li>
-                    <li>Deploying and Managing application in the server</li>
-                  </ul>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-3">
-            <div className="fh5co-blog animate-box">
-              <div className="blog-text">
-                <span className="posted_on">Java Devloper</span>
-                <h3><span style={{cursor: 'default'}}>Mercantile Bank Limited </span></h3>
-                <p>Technology & Environment: JDBC, Servlets, JSP, Java7, Soap, IBM WebSphere</p>
-                <p>Responsibilities:
-                  <ul>
-                    <li>Involved in Analysis, Design, Coding, and Testing of Application</li>
-                    <li>Developed entire admin module, Developed the banking transactions</li>
-                    <li>Integration with third party providers for the Security integration using webservices</li>
-                    <li>Deploying and Managing application in the server</li>
-                  </ul>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
