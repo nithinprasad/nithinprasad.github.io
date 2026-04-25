@@ -235,6 +235,17 @@ const Projects = () => {
                   e.currentTarget.style.boxShadow = `0 4px 15px ${project.color}40`;
                 }}
               >
+                {/* Dark overlay for better text contrast */}
+                <div style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  background: 'linear-gradient(135deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 100%)',
+                  zIndex: 0
+                }}></div>
+
                 {/* Decorative element */}
                 <div style={{
                   position: 'absolute',
@@ -243,8 +254,9 @@ const Projects = () => {
                   width: '150px',
                   height: '150px',
                   borderRadius: '50%',
-                  background: 'rgba(255, 255, 255, 0.1)',
-                  backdropFilter: 'blur(10px)'
+                  background: 'rgba(255, 255, 255, 0.15)',
+                  backdropFilter: 'blur(10px)',
+                  zIndex: 0
                 }}></div>
 
                 <div style={{
@@ -261,14 +273,15 @@ const Projects = () => {
                       width: '50px',
                       height: '50px',
                       borderRadius: '12px',
-                      background: 'rgba(255, 255, 255, 0.2)',
+                      background: 'rgba(255, 255, 255, 0.25)',
                       backdropFilter: 'blur(10px)',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      marginBottom: '15px'
+                      marginBottom: '15px',
+                      boxShadow: '0 4px 12px rgba(0,0,0,0.2)'
                     }}>
-                      <i className="icon-code" style={{fontSize: '24px', color: '#fff'}}></i>
+                      <i className="icon-code" style={{fontSize: '24px', color: '#fff', filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.3))'}}></i>
                     </div>
                     <h3 style={{
                       margin: '0',
@@ -276,7 +289,8 @@ const Projects = () => {
                       fontWeight: 'bold',
                       color: '#fff',
                       lineHeight: '1.3',
-                      marginBottom: '10px'
+                      marginBottom: '10px',
+                      textShadow: '0 2px 8px rgba(0,0,0,0.4)'
                     }}>
                       {project.title}
                     </h3>
@@ -291,23 +305,26 @@ const Projects = () => {
                       alignItems: 'center',
                       gap: '8px',
                       padding: '10px 20px',
-                      background: 'rgba(255, 255, 255, 0.95)',
-                      color: project.color,
+                      background: '#fff',
+                      color: '#333',
                       borderRadius: '25px',
                       textDecoration: 'none',
-                      fontWeight: '600',
+                      fontWeight: '700',
                       fontSize: '14px',
                       alignSelf: 'flex-start',
                       transition: 'all 0.2s ease',
-                      boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)'
+                      boxShadow: '0 4px 15px rgba(0, 0, 0, 0.2)',
+                      border: '2px solid rgba(255, 255, 255, 0.3)'
                     }}
                     onMouseEnter={(e) => {
-                      e.currentTarget.style.background = '#fff';
-                      e.currentTarget.style.transform = 'scale(1.05)';
+                      e.currentTarget.style.background = 'rgba(255, 255, 255, 0.95)';
+                      e.currentTarget.style.transform = 'scale(1.08)';
+                      e.currentTarget.style.boxShadow = '0 6px 20px rgba(0, 0, 0, 0.3)';
                     }}
                     onMouseLeave={(e) => {
-                      e.currentTarget.style.background = 'rgba(255, 255, 255, 0.95)';
+                      e.currentTarget.style.background = '#fff';
                       e.currentTarget.style.transform = 'scale(1)';
+                      e.currentTarget.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.2)';
                     }}
                   >
                     Open Project
