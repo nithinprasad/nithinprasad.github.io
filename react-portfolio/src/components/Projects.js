@@ -110,21 +110,23 @@ const Projects = () => {
                 onClick={() => openModal(project)}
                 style={{
                   padding: '0',
-                  borderLeft: '3px solid #FF9000',
-                  backgroundColor: '#f8f8f8',
+                  borderLeft: '4px solid #FF9000',
+                  backgroundColor: '#ffffff',
                   height: '280px',
                   cursor: 'pointer',
                   transition: 'transform 0.3s ease, box-shadow 0.3s ease',
                   display: 'flex',
-                  flexDirection: 'column'
+                  flexDirection: 'column',
+                  boxShadow: '0 2px 10px rgba(0,0,0,0.08)',
+                  borderRadius: '4px'
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-5px)';
-                  e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.2)';
+                  e.currentTarget.style.transform = 'translateY(-8px)';
+                  e.currentTarget.style.boxShadow = '0 12px 35px rgba(255,144,0,0.25)';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = 'none';
+                  e.currentTarget.style.boxShadow = '0 2px 10px rgba(0,0,0,0.08)';
                 }}
               >
                 <div className="blog-text" style={{padding: '25px', display: 'flex', flexDirection: 'column', height: '100%'}}>
@@ -132,20 +134,22 @@ const Projects = () => {
                   <h3 style={{
                     marginTop: '10px',
                     marginBottom: '12px',
-                    fontSize: '18px',
+                    fontSize: '19px',
+                    fontWeight: 'bold',
                     lineHeight: '1.3',
                     height: '50px',
-                    overflow: 'hidden'
+                    overflow: 'hidden',
+                    color: '#333'
                   }}>
                     {project.title}
                   </h3>
-                  <p style={{marginBottom: '8px', fontSize: '13px', color: '#999'}}>
-                    <i className="icon-briefcase" style={{marginRight: '5px'}}></i>
+                  <p style={{marginBottom: '8px', fontSize: '13px', color: '#666', fontWeight: '500'}}>
+                    <i className="icon-briefcase" style={{marginRight: '5px', color: '#FF9000'}}></i>
                     {project.company}
                   </p>
                   <p style={{
                     fontSize: '12px',
-                    color: '#7f7f7f',
+                    color: '#777',
                     lineHeight: '1.5',
                     overflow: 'hidden',
                     textOverflow: 'ellipsis',
@@ -154,18 +158,24 @@ const Projects = () => {
                     WebkitBoxOrient: 'vertical',
                     flex: 1
                   }}>
-                    <i className="icon-code" style={{marginRight: '5px'}}></i>
+                    <i className="icon-code" style={{marginRight: '5px', color: '#FF9000'}}></i>
                     {project.technology}
                   </p>
-                  <p style={{
+                  <div style={{
                     marginTop: 'auto',
-                    fontSize: '13px',
-                    color: '#FF9000',
-                    fontWeight: 'bold',
+                    paddingTop: '10px',
+                    borderTop: '1px solid #e0e0e0',
                     textAlign: 'center'
                   }}>
-                    Click to view details
-                  </p>
+                    <span style={{
+                      fontSize: '12px',
+                      color: '#FF9000',
+                      fontWeight: '600',
+                      letterSpacing: '0.5px'
+                    }}>
+                      ▸ Click to view details
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -183,20 +193,28 @@ const Projects = () => {
             <div key={index} className="col-md-4 animate-box" style={{marginBottom: '30px'}}>
               <div className="fh5co-blog" style={{
                 padding: '0',
-                borderLeft: '3px solid #FF9000',
-                backgroundColor: '#f8f8f8',
+                borderLeft: '4px solid #FF9000',
+                backgroundColor: '#ffffff',
                 height: '100px',
                 display: 'flex',
                 alignItems: 'center',
-                transition: 'transform 0.3s ease',
-                cursor: 'pointer'
+                transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                cursor: 'pointer',
+                boxShadow: '0 2px 10px rgba(0,0,0,0.08)',
+                borderRadius: '4px'
               }}
-              onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-3px)'}
-              onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-5px)';
+                e.currentTarget.style.boxShadow = '0 8px 25px rgba(255,144,0,0.2)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 2px 10px rgba(0,0,0,0.08)';
+              }}
               >
                 <div className="blog-text" style={{padding: '25px', width: '100%'}}>
-                  <h3 style={{margin: '0', fontSize: '18px'}}>
-                    <a href={project.url} target="_blank" rel="noopener noreferrer" style={{color: '#FF9000', textDecoration: 'none'}}>
+                  <h3 style={{margin: '0', fontSize: '18px', fontWeight: 'bold'}}>
+                    <a href={project.url} target="_blank" rel="noopener noreferrer" style={{color: '#FF9000', textDecoration: 'none', display: 'flex', alignItems: 'center'}}>
                       {project.title}
                       <i className="icon-external-link" style={{marginLeft: '8px', fontSize: '14px'}}></i>
                     </a>
