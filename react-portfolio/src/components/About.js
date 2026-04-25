@@ -32,7 +32,7 @@ const About = () => {
           <div className="col-md-8">
             <h2>Hello There!</h2>
             <p>Enthusiastic and reliable Java Developer with expertise in building large-scale distributed systems. {calculateTotalExperience()} years of industry experience in banking, travel, and e-commerce domains. Currently leading backend development at Expedia Group, with strong background in microservices architecture, Spring Boot, and cloud technologies.</p>
-            <p>
+            <div>
               <ul className="fh5co-social-icons">
                 <li><a href="https://twitter.com/NITHINPRASAD2"><i className="icon-twitter2"></i></a></li>
                 <li><a href="https://www.facebook.com/nithin.chiku"><i className="icon-facebook2"></i></a></li>
@@ -40,7 +40,7 @@ const About = () => {
                 <li><a href="https://github.com/nithinprasad/"><i className="icon-github2"></i></a></li>
                 <li><a href="https://www.instagram.com/nithin.chikku/"><i className="icon-instagram2"></i></a></li>
               </ul>
-            </p>
+            </div>
           </div>
         </div>
       </div>

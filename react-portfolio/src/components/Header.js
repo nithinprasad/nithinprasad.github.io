@@ -12,7 +12,7 @@ const Header = () => {
                 <div className="profile-thumb" style={{background: 'url(v2/assets/img/nithin.jpg)'}}></div>
                 <h1><span>Nithin Prasad</span></h1>
                 <h3><span>Java Developer / Trying to be Full stack</span></h3>
-                <p>
+                <div>
                   <ul className="fh5co-social-icons">
                     <li><a href="https://twitter.com/NITHINPRASAD2"><i className="icon-twitter2"></i></a></li>
                     <li><a href="https://www.facebook.com/nithin.chiku"><i className="icon-facebook2"></i></a></li>
@@ -20,7 +20,7 @@ const Header = () => {
                     <li><a href="https://github.com/nithinprasad/"><i className="icon-github2"></i></a></li>
                     <li><a href="https://www.instagram.com/nithin.chikku/"><i className="icon-instagram2"></i></a></li>
                   </ul>
-                </p>
+                </div>
               </div>
             </div>
           </div>
