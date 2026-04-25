@@ -73,15 +73,21 @@ const Projects = () => {
   const sideProjects = [
     {
       title: 'Kombanz Wedding Planners',
-      url: 'https://kombanzweddingplanners.com/'
+      url: 'https://kombanzweddingplanners.com/',
+      gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+      color: '#f093fb'
     },
     {
       title: 'PRR Trans Global',
-      url: 'https://www.prrtransglobal.com/'
+      url: 'https://www.prrtransglobal.com/',
+      gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
+      color: '#4facfe'
     },
     {
       title: 'Football Heroes',
-      url: 'https://footballheroes.nithinprasad.com/'
+      url: 'https://footballheroes.nithinprasad.com/',
+      gradient: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
+      color: '#43e97b'
     }
   ];
 
@@ -196,34 +202,105 @@ const Projects = () => {
         <div className="row">
           {sideProjects.map((project, index) => (
             <div key={index} className="col-md-4 animate-box" style={{marginBottom: '30px'}}>
-              <div className="fh5co-blog" style={{
-                padding: '0',
-                borderLeft: '4px solid #FF9000',
-                backgroundColor: '#ffffff',
-                height: '100px',
-                display: 'flex',
-                alignItems: 'center',
-                transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-                cursor: 'pointer',
-                boxShadow: '0 2px 10px rgba(0,0,0,0.08)',
-                borderRadius: '4px'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-5px)';
-                e.currentTarget.style.boxShadow = '0 8px 25px rgba(255,144,0,0.2)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = '0 2px 10px rgba(0,0,0,0.08)';
-              }}
+              <div
+                className="fh5co-blog"
+                style={{
+                  padding: '0',
+                  background: project.gradient,
+                  height: '200px',
+                  borderRadius: '8px',
+                  boxShadow: `0 4px 15px ${project.color}40`,
+                  transition: 'all 0.3s ease',
+                  overflow: 'hidden',
+                  position: 'relative'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-8px)';
+                  e.currentTarget.style.boxShadow = `0 12px 30px ${project.color}60`;
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = `0 4px 15px ${project.color}40`;
+                }}
               >
-                <div className="blog-text" style={{padding: '25px', width: '100%'}}>
-                  <h3 style={{margin: '0', fontSize: '18px', fontWeight: 'bold'}}>
-                    <a href={project.url} target="_blank" rel="noopener noreferrer" style={{color: '#FF9000', textDecoration: 'none', display: 'flex', alignItems: 'center'}}>
+                {/* Decorative element */}
+                <div style={{
+                  position: 'absolute',
+                  top: '-50px',
+                  right: '-50px',
+                  width: '150px',
+                  height: '150px',
+                  borderRadius: '50%',
+                  background: 'rgba(255, 255, 255, 0.1)',
+                  backdropFilter: 'blur(10px)'
+                }}></div>
+
+                <div style={{
+                  padding: '30px',
+                  height: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
+                  position: 'relative',
+                  zIndex: 1
+                }}>
+                  <div>
+                    <div style={{
+                      width: '50px',
+                      height: '50px',
+                      borderRadius: '12px',
+                      background: 'rgba(255, 255, 255, 0.2)',
+                      backdropFilter: 'blur(10px)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      marginBottom: '15px'
+                    }}>
+                      <i className="icon-code" style={{fontSize: '24px', color: '#fff'}}></i>
+                    </div>
+                    <h3 style={{
+                      margin: '0',
+                      fontSize: '20px',
+                      fontWeight: 'bold',
+                      color: '#fff',
+                      lineHeight: '1.3',
+                      marginBottom: '10px'
+                    }}>
                       {project.title}
-                      <i className="icon-external-link" style={{marginLeft: '8px', fontSize: '14px'}}></i>
-                    </a>
-                  </h3>
+                    </h3>
+                  </div>
+
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '8px',
+                      padding: '10px 20px',
+                      background: 'rgba(255, 255, 255, 0.95)',
+                      color: project.color,
+                      borderRadius: '25px',
+                      textDecoration: 'none',
+                      fontWeight: '600',
+                      fontSize: '14px',
+                      alignSelf: 'flex-start',
+                      transition: 'all 0.2s ease',
+                      boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.background = '#fff';
+                      e.currentTarget.style.transform = 'scale(1.05)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.background = 'rgba(255, 255, 255, 0.95)';
+                      e.currentTarget.style.transform = 'scale(1)';
+                    }}
+                  >
+                    Open Project
+                    <i className="icon-external-link" style={{fontSize: '12px'}}></i>
+                  </a>
                 </div>
               </div>
             </div>
