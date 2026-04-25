@@ -1,9 +1,9 @@
 import React from 'react';
 
 const Resume = () => {
-  // Calculate experience dynamically from June 2025
+  // Calculate experience dynamically from June 2022
   const calculateExperience = () => {
-    const startDate = new Date(2025, 5, 1); // June 2025 (month is 0-indexed)
+    const startDate = new Date(2022, 5, 1); // June 2022 (month is 0-indexed)
     const currentDate = new Date();
 
     const yearsDiff = currentDate.getFullYear() - startDate.getFullYear();
@@ -14,13 +14,13 @@ const Resume = () => {
     const months = totalMonths % 12;
 
     if (years === 0 && months === 0) {
-      return 'June 2025 - Present';
+      return 'June 2022 - Present';
     } else if (years === 0) {
-      return `June 2025 - Present (${months} month${months > 1 ? 's' : ''})`;
+      return `June 2022 - Present (${months} month${months > 1 ? 's' : ''})`;
     } else if (months === 0) {
-      return `June 2025 - Present (${years} year${years > 1 ? 's' : ''})`;
+      return `June 2022 - Present (${years} year${years > 1 ? 's' : ''})`;
     } else {
-      return `June 2025 - Present (${years} year${years > 1 ? 's' : ''} ${months} month${months > 1 ? 's' : ''})`;
+      return `June 2022 - Present (${years} year${years > 1 ? 's' : ''} ${months} month${months > 1 ? 's' : ''})`;
     }
   };
 
@@ -42,8 +42,8 @@ const Resume = () => {
                 <div className="timeline-badge"><i className="icon-suitcase"></i></div>
                 <div className="timeline-panel">
                   <div className="timeline-heading">
-                    <h3 className="timeline-title">Technical Lead</h3>
-                    <span className="company">IBS Software (Client: Expedia Group) - {calculateExperience()}</span>
+                    <h3 className="timeline-title">Senior Software Engineer</h3>
+                    <span className="company">IBS Software - {calculateExperience()}</span>
                   </div>
                 </div>
               </li>
@@ -52,7 +52,7 @@ const Resume = () => {
                 <div className="timeline-panel">
                   <div className="timeline-heading">
                     <h3 className="timeline-title">Onsite Technical Lead</h3>
-                    <span className="company">Luminor Bank Estonia - TCS Consultant - 2021 - 2025</span>
+                    <span className="company">Luminor Bank Estonia - TCS Consultant - 2021 - June 2022</span>
                   </div>
                 </div>
               </li>
@@ -61,7 +61,7 @@ const Resume = () => {
                 <div className="timeline-panel">
                   <div className="timeline-heading">
                     <h3 className="timeline-title">Technical Lead</h3>
-                    <span className="company">TCS - 2018 - 2021</span>
+                    <span className="company">TCS - 2018 - 2020</span>
                   </div>
                 </div>
               </li>
