@@ -32,8 +32,9 @@ function App() {
         await loadScript('/js/jquery.waypoints.min.js');
         await loadScript('/js/jquery.stellar.min.js');
         await loadScript('/js/jquery.easypiechart.min.js');
-        await loadScript('https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false');
-        await loadScript('/js/google_map.js');
+        // Google Maps disabled - no map element in React app
+        // await loadScript('https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false');
+        // await loadScript('/js/google_map.js');
         await loadScript('/js/main.js');
       } catch (error) {
         console.error('Error loading scripts:', error);

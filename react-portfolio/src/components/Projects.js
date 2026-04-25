@@ -112,7 +112,7 @@ const Projects = () => {
                   padding: '0',
                   borderLeft: '4px solid #FF9000',
                   backgroundColor: '#ffffff',
-                  height: '280px',
+                  height: '300px',
                   cursor: 'pointer',
                   transition: 'transform 0.3s ease, box-shadow 0.3s ease',
                   display: 'flex',
@@ -134,12 +134,17 @@ const Projects = () => {
                   <h3 style={{
                     marginTop: '10px',
                     marginBottom: '12px',
-                    fontSize: '19px',
+                    fontSize: '17px',
                     fontWeight: 'bold',
-                    lineHeight: '1.3',
-                    height: '50px',
+                    lineHeight: '1.4',
+                    minHeight: '48px',
+                    maxHeight: '72px',
                     overflow: 'hidden',
-                    color: '#333'
+                    color: '#333',
+                    display: '-webkit-box',
+                    WebkitLineClamp: 3,
+                    WebkitBoxOrient: 'vertical',
+                    wordBreak: 'break-word'
                   }}>
                     {project.title}
                   </h3>
