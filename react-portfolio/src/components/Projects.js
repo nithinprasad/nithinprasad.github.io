@@ -3,9 +3,9 @@ import React from 'react';
 const Projects = () => {
   const professionalProjects = [
     {
-      role: 'Technical Lead',
+      role: 'Senior Software Engineer',
       title: 'Expedia WLT (Worldwide Loyalty & Traveler)',
-      company: 'IBS Software (Client: Expedia Group)',
+      company: 'IBS Software',
       technology: 'Kotlin, GraphQL, Java, React, Spring Boot, Microservices, OAuth2, Oracle, Docker, Kubernetes, CI/CD',
       responsibilities: [
         'Leading backend development using Kotlin and GraphQL for Expedia\'s Worldwide Loyalty and Traveler platform',
