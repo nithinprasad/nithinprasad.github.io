@@ -88,6 +88,18 @@ const Projects = () => {
       url: 'https://footballheroes.nithinprasad.com/',
       gradient: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
       color: '#43e97b'
+    },
+    {
+      title: 'Kadavil Associates',
+      url: 'https://kadavil-associates.web.app/',
+      gradient: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
+      color: '#fa709a'
+    },
+    {
+      title: 'Meadows FC Alappuzha',
+      url: 'https://meadowsfcalappuzha.web.app/',
+      gradient: 'linear-gradient(135deg, #30cfd0 0%, #330867 100%)',
+      color: '#30cfd0'
     }
   ];
 
