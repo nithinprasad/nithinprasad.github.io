@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Projects = () => {
+  const [selectedProject, setSelectedProject] = useState(null);
+
   const professionalProjects = [
     {
       role: 'Senior Software Engineer',
@@ -83,6 +85,14 @@ const Projects = () => {
     }
   ];
 
+  const openModal = (project) => {
+    setSelectedProject(project);
+  };
+
+  const closeModal = () => {
+    setSelectedProject(null);
+  };
+
   return (
     <div id="fh5co-blog">
       <div className="container">
@@ -94,37 +104,68 @@ const Projects = () => {
         </div>
         <div className="row">
           {professionalProjects.map((project, index) => (
-            <div key={index} className="col-md-6 animate-box" style={{marginBottom: '30px'}}>
-              <div className="fh5co-blog" style={{
-                padding: '0',
-                borderLeft: '3px solid #FF9000',
-                backgroundColor: '#f8f8f8',
-                height: '100%',
-                minHeight: '400px'
-              }}>
-                <div className="blog-text" style={{padding: '25px'}}>
-                  <div style={{marginBottom: '18px'}}>
-                    <span className="posted_on">{project.role}</span>
-                    <h3 style={{marginTop: '10px', marginBottom: '8px', fontSize: '20px'}}>
-                      {project.title}
-                    </h3>
-                    <p style={{marginBottom: '5px', fontSize: '13px', color: '#999'}}>
-                      <i className="icon-briefcase" style={{marginRight: '5px'}}></i>
-                      {project.company}
-                    </p>
-                    <p style={{marginBottom: '18px', fontSize: '13px', color: '#7f7f7f', lineHeight: '1.5'}}>
-                      <i className="icon-code" style={{marginRight: '5px'}}></i>
-                      {project.technology}
-                    </p>
-                  </div>
-                  <div>
-                    <h4 style={{marginBottom: '12px', color: '#333', fontSize: '15px'}}>Key Responsibilities:</h4>
-                    <ul style={{marginLeft: '0', paddingLeft: '20px', lineHeight: '1.7', fontSize: '14px'}}>
-                      {project.responsibilities.map((resp, idx) => (
-                        <li key={idx} style={{marginBottom: '6px', color: '#666'}}>{resp}</li>
-                      ))}
-                    </ul>
-                  </div>
+            <div key={index} className="col-md-4 col-sm-6 animate-box" style={{marginBottom: '30px'}}>
+              <div
+                className="fh5co-blog"
+                onClick={() => openModal(project)}
+                style={{
+                  padding: '0',
+                  borderLeft: '3px solid #FF9000',
+                  backgroundColor: '#f8f8f8',
+                  height: '280px',
+                  cursor: 'pointer',
+                  transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                  display: 'flex',
+                  flexDirection: 'column'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-5px)';
+                  e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.2)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
+              >
+                <div className="blog-text" style={{padding: '25px', display: 'flex', flexDirection: 'column', height: '100%'}}>
+                  <span className="posted_on" style={{fontSize: '12px'}}>{project.role}</span>
+                  <h3 style={{
+                    marginTop: '10px',
+                    marginBottom: '12px',
+                    fontSize: '18px',
+                    lineHeight: '1.3',
+                    height: '50px',
+                    overflow: 'hidden'
+                  }}>
+                    {project.title}
+                  </h3>
+                  <p style={{marginBottom: '8px', fontSize: '13px', color: '#999'}}>
+                    <i className="icon-briefcase" style={{marginRight: '5px'}}></i>
+                    {project.company}
+                  </p>
+                  <p style={{
+                    fontSize: '12px',
+                    color: '#7f7f7f',
+                    lineHeight: '1.5',
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis',
+                    display: '-webkit-box',
+                    WebkitLineClamp: 3,
+                    WebkitBoxOrient: 'vertical',
+                    flex: 1
+                  }}>
+                    <i className="icon-code" style={{marginRight: '5px'}}></i>
+                    {project.technology}
+                  </p>
+                  <p style={{
+                    marginTop: 'auto',
+                    fontSize: '13px',
+                    color: '#FF9000',
+                    fontWeight: 'bold',
+                    textAlign: 'center'
+                  }}>
+                    Click to view details
+                  </p>
                 </div>
               </div>
             </div>
@@ -144,11 +185,15 @@ const Projects = () => {
                 padding: '0',
                 borderLeft: '3px solid #FF9000',
                 backgroundColor: '#f8f8f8',
-                height: '100%',
-                minHeight: '100px',
+                height: '100px',
                 display: 'flex',
-                alignItems: 'center'
-              }}>
+                alignItems: 'center',
+                transition: 'transform 0.3s ease',
+                cursor: 'pointer'
+              }}
+              onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-3px)'}
+              onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
+              >
                 <div className="blog-text" style={{padding: '25px', width: '100%'}}>
                   <h3 style={{margin: '0', fontSize: '18px'}}>
                     <a href={project.url} target="_blank" rel="noopener noreferrer" style={{color: '#FF9000', textDecoration: 'none'}}>
@@ -162,6 +207,104 @@ const Projects = () => {
           ))}
         </div>
       </div>
+
+      {/* Modal */}
+      {selectedProject && (
+        <div
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: 'rgba(0,0,0,0.7)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 9999,
+            padding: '20px'
+          }}
+          onClick={closeModal}
+        >
+          <div
+            style={{
+              backgroundColor: '#fff',
+              borderRadius: '10px',
+              maxWidth: '800px',
+              width: '100%',
+              maxHeight: '90vh',
+              overflow: 'auto',
+              position: 'relative',
+              boxShadow: '0 20px 60px rgba(0,0,0,0.3)'
+            }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={closeModal}
+              style={{
+                position: 'absolute',
+                top: '15px',
+                right: '15px',
+                background: '#FF9000',
+                color: '#fff',
+                border: 'none',
+                borderRadius: '50%',
+                width: '35px',
+                height: '35px',
+                fontSize: '20px',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                zIndex: 10
+              }}
+            >
+              ×
+            </button>
+            <div style={{
+              borderLeft: '5px solid #FF9000',
+              padding: '40px'
+            }}>
+              <span className="posted_on" style={{fontSize: '13px'}}>{selectedProject.role}</span>
+              <h2 style={{
+                marginTop: '10px',
+                marginBottom: '15px',
+                color: '#333',
+                fontSize: '28px'
+              }}>
+                {selectedProject.title}
+              </h2>
+              <p style={{marginBottom: '10px', fontSize: '15px', color: '#666'}}>
+                <i className="icon-briefcase" style={{marginRight: '8px', color: '#FF9000'}}></i>
+                <strong>Company:</strong> {selectedProject.company}
+              </p>
+              <p style={{marginBottom: '25px', fontSize: '14px', color: '#666', lineHeight: '1.8'}}>
+                <i className="icon-code" style={{marginRight: '8px', color: '#FF9000'}}></i>
+                <strong>Technology Stack:</strong> {selectedProject.technology}
+              </p>
+              <h3 style={{
+                marginBottom: '15px',
+                color: '#333',
+                fontSize: '20px',
+                borderBottom: '2px solid #FF9000',
+                paddingBottom: '10px'
+              }}>
+                Key Responsibilities
+              </h3>
+              <ul style={{
+                marginLeft: '0',
+                paddingLeft: '25px',
+                lineHeight: '2',
+                fontSize: '15px'
+              }}>
+                {selectedProject.responsibilities.map((resp, idx) => (
+                  <li key={idx} style={{marginBottom: '12px', color: '#555'}}>{resp}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
